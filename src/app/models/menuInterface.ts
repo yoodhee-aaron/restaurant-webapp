@@ -1,24 +1,24 @@
 import { DecimalPipe } from '@angular/common';
 
-export interface Starter {
+export interface IStarter {
 	id: number;
 	name: string;
 	price: DecimalPipe;
 }
 
-export interface Main {
+export interface IMain {
 	id: number;
 	name: string;
 	price: DecimalPipe;
 }
 
-export interface Dessert {
+export interface IDessert {
 	id: number;
 	name: string;
 	price: DecimalPipe;
 }
 
-export interface RootObject {
+export interface IRootObject {
 	starters: Starter[];
 	mains: Main[];
 	desserts: Dessert[];

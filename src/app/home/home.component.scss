@@ -4,4 +4,8 @@ header {
 
 section {
     padding: 150px 0;
+    & .starter-list {
+        list-style: none;
+        padding-left: 0;
+    }
 }

@@ -2,6 +2,15 @@
   <div class="container text-center">
     <h1>Welcome to OpenTable Restaurant</h1>
     <p class="lead">Your Restaurant, Your Food, Your Time, Always Avalaible</p>
+    <div>
+      <button
+        type="button"
+        [routerLink]="['/reservation']"
+        class="btn btn-dark"
+      >
+        Reservation
+      </button>
+    </div>
   </div>
 </header>
 <section>
@@ -9,15 +18,19 @@
     <div class="row">
       <div class="col-md-8 mx-auto"><h3 class="text-center">Our menu</h3></div>
       <div class="col-md-8 mx-auto">
-        <h4 class="text-center">Starter</h4>
-        <ul>
-          <li>rr</li>
+        <h4 class="text-center mt-4">Starter</h4>
+        <ul class="starter-list mt-3">
+          <li class="mb-4 text-center" *ngFor="let item of starters">
+            {{ item.name }}
+          </li>
         </ul>
       </div>
       <div class="col-md-8 mx-auto">
         <h4 class="text-center">Main Course</h4>
-        <ul>
-          <li></li>
+        <ul class="starter-list mt-3">
+          <li class="mb-4 text-center" *ngFor="let item of main">
+            {{ item.name }}
+          </li>
         </ul>
       </div>
     </div>

@@ -1,3 +1,41 @@
-<p>
-  reservation works!
-</p>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"><h1>Starter</h1></div>
+      <div class="col-md-3" *ngFor="let star of starters; let i = index">
+        <p>{{ star.name }}</p>
+        <p>{{ star.price }}£</p>
+        <p>
+          <input
+            type="checkbox"
+            name="starter"
+            [checked]="false"
+            value="{{star.name}}"
+            (change)="starterCheckbox(star.name)"
+          />
+        </p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-12"><h1>Main Course</h1></div>
+      <div class="col-md-3" *ngFor="let item of main; let i = index">
+        <p>{{ item.name }}</p>
+        <p>{{ item.price }}£</p>
+        <div *ngIf="item.name.length == 2">No records found.</div>
+        <p>
+          <input
+            type="checkbox"
+            (change)="mainCheckbox(item.name)"
+            [value]="item.name"
+            name="main"
+          />
+        </p>
+      </div>
+    </div>
+    <p>
+      <button type="button" (click)="makeOrder()" class="btn btn-dark">
+        Make Order
+      </button>
+    </p>
+  </div>
+</section>

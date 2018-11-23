@@ -9,6 +9,7 @@ import { HomeComponent } from "./home/home.component";
 import { HeaderComponent } from "./header/header.component";
 import { HttpClientModule } from "@angular/common/http";
 import { MenuService } from "./service/menu.service";
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,7 @@ import { MenuService } from "./service/menu.service";
     HomeComponent,
     HeaderComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [MenuService],
   bootstrap: [AppComponent]
 })
